@@ -9,7 +9,6 @@ import { Menu2Component } from './menu2/menu2.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    Menu2Component
   ],
   imports: [
     BrowserModule
