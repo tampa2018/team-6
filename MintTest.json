@@ -1,0 +1,90 @@
+{
+   "TestUser":
+   [
+      {
+         "date": 1999,
+         "amount_vended": "15",
+         "current_balance": "20"
+      },
+      {
+         "date": 2008,
+         "amount_vended": "42",
+         "current_balance": "115"
+      },
+      {
+         "date": 2007,
+         "amount_vended": "29",
+         "Exports": "79"
+      },
+      {
+         "date": 2009,
+         "amount_vended": "346",
+         "Exports": "324"
+      },
+      {
+         "date": 2006,
+         "amount_vended": "44",
+         "Exports": "69"
+      },
+      {
+         "date": 2010,
+         "amount_vended": "424",
+         "Exports": "503"
+      },
+      {
+         "date": 2005,
+         "amount_vended": "28",
+         "Exports": "48"
+      },
+      {
+         "date": 2011,
+         "amount_vended": "413",
+         "Exports": "603"
+      },
+      {
+         "date": 2004,
+         "amount_vended": "34",
+         "Exports": "41"
+      },
+      {
+         "date": 2012,
+         "amount_vended": "313",
+         "Exports": "517"
+      },
+      {
+         "date": 2003,
+         "amount_vended": "21",
+         "Exports": "36"
+      },
+      {
+         "date": 2013,
+         "amount_vended": "513",
+         "Exports": "615"
+      },
+      {
+         "date": 2002,
+         "amount_vended": "18",
+         "Exports": "23"
+      },
+      {
+         "date": 2014,
+         "amount_vended": "471",
+         "Exports": "766"
+      },
+      {
+         "date": 2001,
+         "amount_vended": "17",
+         "Exports": "29"
+      },
+      {
+         "date": 2015,
+         "amount_vended": "119",
+         "Exports": "181"
+      },
+      {
+         "date": 2000,
+         "amount_vended": "25",
+         "Exports": "25"
+      }
+   ]
+}
