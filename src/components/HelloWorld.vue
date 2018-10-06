@@ -1,113 +1,135 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+
+
+  <form action="action_page.php">
+ <div class="imgcontainer">
+   <img src="img_avatar2.png" alt="Avatar" class="avatar">
+
+
+ </div>
+
+ <div class="container">
+   <label for="uname"><b>Username</b></label>
+   <input type="text" placeholder="Enter Username" name="uname" required>
+
+   <label for="psw"><b>Password</b></label>
+   <input type="password" placeholder="Enter Password" name="psw" required>
+
+   <button type="submit">Login</button>
+   <label>
+     <input type="checkbox" checked="checked" name="remember"> Remember me
+   </label>
+ </div>
+
+ <div class="container" style="background-color:#f1f1f1">
+   <button type="button" class="cancelbtn">Cancel</button>
+   <span class="psw">Forgot <a href="#">password?</a></span>
+ </div>
+</form>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
-  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+/* The Modal (background) */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   padding-top: 60px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+/* Modal Content/Box */
+.modal-content {
+   background-color: #fefefe;
+   margin: 5px auto; /* 15% from the top and centered */
+   border: 1px solid #888;
+   width: 80%; /* Could be more or less, depending on screen size */
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+/* The Close Button */
+.close {
+   /* Position it in the top right corner outside of the modal */
+   position: absolute;
+   right: 25px;
+   top: 0;
+   color: #000;
+   font-size: 35px;
+   font-weight: bold;
 }
-a {
-  color: #42b983;
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+   color: red;
+   cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+   -webkit-animation: animatezoom 0.6s;
+   animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+   from {-webkit-transform: scale(0)}
+   to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+   from {transform: scale(0)}
+   to {transform: scale(1)}
 }
 </style>
